@@ -1,0 +1,292 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+}
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!HEADER!!!!!!!!!!!!!!!!!!!!!!!!!! */
+header{
+    display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    /* background: black; */
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    color:white;
+    z-index: 9999;
+}
+.top-bar__logo{
+font-size: 20px;
+    border:2px solid white;
+    margin:5px;
+    border-radius: 20%;
+}
+.k{
+    display:inline-block;
+    padding:3px;
+}
+
+.b{
+    display:inline-block;
+    padding:3px;
+}
+
+.top-bar__logo:hover{
+color:black;
+border:2px solid black;
+background:white;
+
+}
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!NAVIGATION!!!!!!!!!!!!!!!!!!!!!!!!!! */
+nav{
+    position: fixed;
+    /* top: -300px; */
+    background-color: rgba(0, 0, 0, 0.85);
+    top: 0;
+    left: 0;
+    transition: 0.5s
+}
+nav.off{
+    top:-150px;
+   }
+
+nav ul{
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    width:100vw;
+    text-align: center;
+}
+nav li{
+    flex-basis: 100%;
+}
+nav li a{
+    display: block;
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding:10px;
+}
+
+nav i {
+    position: fixed;
+    font-size: 30px;
+    right: 4vw;
+    top: 2vh;
+    color: white;
+    z-index: 1;
+}
+
+i.off {
+    display: none;
+}
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!! FIRST VIEW SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
+.firstView{
+    position: relative;
+    height: 100vh;
+    width:100%;
+    background-image: url(../img/firstview-bgc.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* .firstView::before {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/06/37/abstract-1867838_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 1;
+    } */
+
+    /* .firstView::after {
+        background-image: url(https://cdn.pixabay.com/photo/2012/12/09/00/16/smoke-69124_960_720.jpg);
+        background-color: rgba(231, 12, 231, 0.986);
+        background-size: cover;
+        background-position: right;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        } */
+
+.hello{
+    position: absolute;
+    width:70%;
+    text-align: center;
+    background-color:black;
+    top:20%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    color:white;
+    padding: 20px 10px;
+
+}
+
+.introduce{
+    color:khaki;
+    position: absolute;
+    width: 94%;
+    top: 36%;
+    left: 3%;
+}
+.introduce h1{
+    font-size: 38px;
+    padding: 10px 0px;;
+    border-bottom: 2px solid white;
+}
+
+
+.firstView button{
+position: absolute;
+bottom:10%;
+right: 8%;
+font-size: 18px;
+padding:10px 15px;
+letter-spacing: 0.1cm;
+background: none;
+font-weight: 800;
+text-align: center;
+text-transform: uppercase;
+border: 2px solid aquamarine;
+color:aquamarine;
+cursor:pointer;
+}
+.firstView button:hover{
+    background:aquamarine;
+    color:black;
+}
+
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!! PROJECTS SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
+.projects{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background:rgba(192, 192, 192, 0.76)
+}
+
+.projects h1{
+    font-size: 40px;
+    width:70%;
+    text-align: center;
+    margin:20px;
+    padding-bottom:10px;
+    border-bottom: 2px solid black;
+}
+.project{
+position: relative;
+    width: 290px;
+    height: 250px;
+    background-size: contain;
+    /* background-position: center; */
+    /* border:2px solid black; */
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #3e3e3e;
+    
+}
+.project::before{
+    content:'';
+    position: absolute;
+    z-index: 99;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+    transition: .9s
+
+}
+.project:hover::before{
+    background-color: #000;
+    opacity: .5;
+}
+.project::after{
+    content:'';
+    position: absolute;
+    z-index: 99;
+    left:50%;
+    bottom:-50px;
+display: block;
+width:100px;
+height:50px;
+
+}
+.project:hover::after{
+    bottom:47%;
+}
+
+.project:nth-of-type(1){
+/* background-image: url(); */
+
+}
+.project:nth-of-type(2){
+    /* background-image: url(); */
+}
+
+.project:nth-of-type(3){
+        /* background-image: url(); */
+}
+
+.contact{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(221,82,117);
+}
+
+.contact h1{
+    font-size: 40px;
+    width:70%;
+    text-align: center;
+    margin:20px;
+    padding-bottom:10px;
+    border-bottom: 2px solid black;
+}
+
+.contact h2{
+   margin-bottom:15px;
+   font-size:25px;
+   width: 100%;
+   text-align: center
+
+}
+.personal{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social span{
+    float:left;
+    font-size: 20px;
+    margin: 0 auto;
+    line-height: 72px;
+    font-weight: bolder;
+    padding:5px;
+}
+.social img{
+    float:left;
+    clear:both;
+}

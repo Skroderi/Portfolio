@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-
-body{
-
-}
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!HEADER!!!!!!!!!!!!!!!!!!!!!!!!!! */
 header{
     display: flex;
@@ -23,7 +19,7 @@ header{
     z-index: 9999;
 }
 .top-bar__logo{
-font-size: 20px;
+    font-size: 20px;
     border:2px solid white;
     margin:5px;
     border-radius: 20%;
@@ -39,9 +35,9 @@ font-size: 20px;
 }
 
 .top-bar__logo:hover{
-color:black;
-border:2px solid black;
-background:white;
+    color:black;
+    border:2px solid black;
+    background:white;
 
 }
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!NAVIGATION!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -88,6 +84,15 @@ nav i {
 i.off {
     display: none;
 }
+@media (min-width:750px){
+    .fas{
+        font-size:40px;
+    }
+    .top-bar__logo{
+        font-size:30px;
+    }
+}
+
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!! FIRST VIEW SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
 .firstView{
     position: relative;
@@ -96,42 +101,13 @@ i.off {
     background-image: url(../img/firstview-bgc.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
-
-/* .firstView::before {
-    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/06/37/abstract-1867838_960_720.jpg);
-    background-size: cover;
-    background-position: center;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    opacity: 1;
-    } */
-
-    /* .firstView::after {
-        background-image: url(https://cdn.pixabay.com/photo/2012/12/09/00/16/smoke-69124_960_720.jpg);
-        background-color: rgba(231, 12, 231, 0.986);
-        background-size: cover;
-        background-position: right;
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        opacity: 0.7;
-        } */
 
 .hello{
     position: absolute;
     width:70%;
+    max-width:370px;
     text-align: center;
     background-color:black;
     top:20%;
@@ -149,53 +125,104 @@ i.off {
     position: absolute;
     width: 94%;
     top: 36%;
-    left: 3%;
+    left:7%;
 }
 .introduce h1{
-    font-size: 38px;
-    padding: 10px 0px;;
+    font-size: 36px;
+}
+.introduce h1:nth-of-type(2){
     border-bottom: 2px solid white;
+    padding-bottom:10px;
+}
+.introduce h3{
+    width:200px;
+    float:left;
 }
 
-
 .firstView button{
-position: absolute;
-bottom:10%;
-right: 8%;
-font-size: 18px;
-padding:10px 15px;
-letter-spacing: 0.1cm;
-background: none;
-font-weight: 800;
-text-align: center;
-text-transform: uppercase;
-border: 2px solid aquamarine;
-color:aquamarine;
-cursor:pointer;
+    bottom:10%;
+    right: 5%;
+    font-size: 15px;
+    padding:10px 15px;
+    margin-top:8vw;
+    margin-left:10vw;
+    letter-spacing: 0.1cm;
+    background: none;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid aquamarine;
+    color:aquamarine;
+    cursor:pointer;
 }
 .firstView button:hover{
     background:aquamarine;
     color:black;
 }
 
+@media (min-width:400px){
+    .introduce h1{
+        font-size: 42px;
+    }
+    .introduce h3{
+        font-size: 20px;
+    }
+}
+@media (min-width:720px){
+    .hello{
+        font-size: 32px;
+    }
+    .introduce{
+        left:10%;
+    }
+    .introduce h1{
+        font-size: 55px;
+    }
+    .introduce h3{
+        font-size: 20px;
+    }
+    .firstView button{
+        font-size: 20px;
+       
+}
+@media (min-width:1000px){
+    .introduce{
+        left:12%;
+    }
+    .introduce h1{
+        font-size: 65px;
+    }
+    .introduce h3{
+        font-size: 25px;
+    }   
+}
+
+}
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!! PROJECTS SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
+.portfolio{
+    background:rgba(192, 192, 192, 0.76)
+}
 .projects{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background:rgba(192, 192, 192, 0.76)
+    width:100%;
 }
 
-.projects h1{
+.portfolio h1{
     font-size: 40px;
     width:70%;
     text-align: center;
-    margin:20px;
+    padding-top:50px;
+    margin-bottom:50px;
     padding-bottom:10px;
+    margin-left: auto;
+    margin-right:auto;
     border-bottom: 2px solid black;
 }
 .project{
-position: relative;
+    display:flex;
+    position: relative;
     width: 290px;
     height: 250px;
     background-size: contain;
@@ -207,7 +234,7 @@ position: relative;
     box-shadow: 0 0 10px #3e3e3e;
     
 }
-.project::before{
+/* .project::before{
     content:'';
     position: absolute;
     z-index: 99;
@@ -229,14 +256,14 @@ position: relative;
     z-index: 99;
     left:50%;
     bottom:-50px;
-display: block;
-width:100px;
-height:50px;
+    display: block;
+    width:100px;
+    height:50px;
 
 }
 .project:hover::after{
     bottom:47%;
-}
+} */
 
 .project:nth-of-type(1){
 /* background-image: url(); */
@@ -249,6 +276,45 @@ height:50px;
 .project:nth-of-type(3){
         /* background-image: url(); */
 }
+@media (min-width:750px){
+.portfolio h1{
+    font-size: 60px;
+    max-width:400px;
+}
+.project{
+    width: 360px;
+    height: 250px;
+}
+}
+
+@media (min-width:1000px){
+.projects h1{
+        font-size: 70px;
+        text-align: center;
+    }
+.projects{
+   flex-direction: row;
+    width:80%;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin:0 auto;
+}
+
+.project{
+    flex-basis: 50%;
+    max-width:300px;
+    margin:50px;
+}
+}
+/* .project:nth-of-type(even){
+    align-self: flex-end;
+    margin-right:50px;
+}
+.project:nth-of-type(odd){
+    margin-left:50px;
+} */
+
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!! CONTACT !!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .contact{
     display:flex;
@@ -261,13 +327,13 @@ height:50px;
     font-size: 40px;
     width:70%;
     text-align: center;
-    margin:20px;
+    margin:50px;
     padding-bottom:10px;
     border-bottom: 2px solid black;
 }
 
 .contact h2{
-   margin-bottom:15px;
+   margin-bottom:25px;
    font-size:25px;
    width: 100%;
    text-align: center
@@ -290,3 +356,23 @@ height:50px;
     float:left;
     clear:both;
 }
+
+@media (min-width:750px){
+    .contact h1{
+        font-size: 60px;
+        max-width:400px;
+    }
+    .contact h2{
+        font-size: 40px;
+    }
+    .social span{
+        float:left;
+        font-size: 30px;
+    }
+    }
+  
+    @media (min-width:1000px){
+        .contact h1{
+            font-size: 70px;
+        }
+    }

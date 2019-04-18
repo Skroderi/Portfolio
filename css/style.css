@@ -105,20 +105,33 @@ i.off {
 }
 
 .hello{
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
     width:70%;
+    min-width:280px;
     max-width:370px;
-    text-align: center;
     background-color:black;
     top:20%;
     left:50%;
     transform: translate(-50%, -50%);
-    background-size: cover;
-    background-position: center;
     color:white;
-    padding: 20px 10px;
-
+  line-height: 50px;
+  padding:5px;
+  text-align: center;
 }
+
+.hello .text{
+    letter-spacing: 1px;
+    text-transform: uppercase;   
+}
+
+.cursor {
+    opacity: 0;
+    transition: .2s;
+   }
+ .cursor.active {
+    opacity: 1;
+   }
 
 .introduce{
     color:khaki;
@@ -221,36 +234,19 @@ i.off {
     border-bottom: 2px solid black;
 }
 .project{
-    display:flex;
     position: relative;
     width: 290px;
     height: 250px;
     background-size: contain;
-    /* background-position: center; */
-    /* border:2px solid black; */
     margin-bottom: 50px;
     background-repeat: no-repeat;
     border-radius: 15px;
     box-shadow: 0 0 10px #3e3e3e;
+    overflow: hidden;
     
 }
-/* .project::before{
-    content:'';
-    position: absolute;
-    z-index: 99;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    border-radius: 15px;
-    transition: .9s
 
-}
-.project:hover::before{
-    background-color: #000;
-    opacity: .5;
-}
-.project::after{
+/* .project::after{
     content:'';
     position: absolute;
     z-index: 99;
@@ -321,6 +317,7 @@ i.off {
     flex-direction: column;
     align-items: center;
     background-color: rgb(221,82,117);
+    padding-bottom:50px;
 }
 
 .contact h1{

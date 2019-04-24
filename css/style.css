@@ -49,7 +49,8 @@ nav{
     background-color: rgba(0, 0, 0, 0.85);
     top: 0;
     left: 0;
-    transition: 0.5s
+    transition: 0.5s;
+    border-bottom: 4px solid goldenrod
 }
 nav.off{
     top:-150px;
@@ -62,11 +63,9 @@ nav ul{
     width:100vw;
     text-align: center;
 }
-nav li{
-    flex-basis: 100%;
-}
-nav li a{
-    display: block;
+
+nav  a{
+    display: inline-block;
     text-decoration: none;
     color:white;
     text-transform: uppercase;
@@ -77,10 +76,11 @@ nav li a{
 nav i {
     position: fixed;
     font-size: 30px;
-    right: 4vw;
-    top: 2vh;
+    right: 15px;
+    top: 15px;
     color: white;
     z-index: 1;
+    cursor: pointer;
 }
 
 i.off {
@@ -408,13 +408,19 @@ z-index: 99;
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!! CONTACT !!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .contact{
+    position: relative;
     display:flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(221,82,117);
-    padding-bottom:50px;
+    padding-bottom:20px;
 }
-
+/* .all{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+} */
 .contact h1{
     font-size: 42px;
     width:60%;
@@ -432,7 +438,7 @@ z-index: 99;
 
 .contact h2{
    margin-bottom:25px;
-   font-size:25px;
+   font-size:30px;
    width: 100%;
    text-align: center
 
@@ -449,12 +455,25 @@ z-index: 99;
     line-height: 72px;
     font-weight: bolder;
     padding:5px;
+    color: black;
 }
 .social img{
     float:left;
     clear:both;
+    margin-bottom:20px;
 }
-
+.fab{
+float:left;
+clear:both;
+font-size:72px;
+color:white;
+}
+.item{
+  transition: .3s
+}
+.item:hover{
+transform: scale(1.05)
+}
 @media (min-width:750px){
     .contact h1{
         font-size: 50px;
@@ -462,7 +481,7 @@ z-index: 99;
         width:30%;
     }
     .contact h2{
-        font-size: 30px;
+        font-size: 35px;
     }
     .social span{
         float:left;

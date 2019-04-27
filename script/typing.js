@@ -1,6 +1,6 @@
-let i = -5;
+let i = -2;
 const text = "hello friend.";
-const speed = 350;
+const speed = 150;
 const spnCursor = document.querySelector('.cursor');
 window.onload = typing = () => {
     if (i < text.length) {
@@ -13,4 +13,4 @@ window.onload = typing = () => {
 const cursorAnimation = () => {
     spnCursor.classList.toggle('active');
 }
-setInterval(cursorAnimation, 350);
+setInterval(cursorAnimation, 250);

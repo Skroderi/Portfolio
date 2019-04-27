@@ -35,59 +35,149 @@ header{
     color:black;
 } */
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!NAVIGATION!!!!!!!!!!!!!!!!!!!!!!!!!! */
-nav{
-    position: fixed;
-    /* top: -300px; */
-    background-color: rgba(0, 0, 0, 0.85);
-    top: 0;
-    left: 0;
-    transition: 0.5s;
-    border-bottom: 4px solid goldenrod
-}
-nav.off{
-    top:-150px;
-   }
 
-nav ul{
-    display:flex;
-    flex-direction: column;
-    list-style: none;
-    width:100vw;
+.on + ul {
+    opacity: 1;
+  }
+  nav ul {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s .1s ease-in-out;
+    color: #000;
+    list-style-type: none;
     text-align: center;
-}
+    z-index: 200;
+  }
 
-nav  a{
-    display: inline-block;
-    font-size:20px;
+  li a {
+    margin-bottom: 0.5em;
+    display: block;
+    color: #000;
     text-decoration: none;
-    color:white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding:10px;
+    font-size:30px;
+    padding-bottom:10px;
+    transition: .3s
+  }
+  li a:hover{
+      transform:scale(1.1)
+  }
+
+.menu{
+    position: fixed;
+    right: -70px;
+    top: -70px;
+    z-index: 100;
+    width: 130px;
+    height: 130px;
+    background: #FFF;
+    border-radius: 50% 50% 50% 50%;
+    transition: .5s ease-in-out;
+    box-shadow:0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    cursor: pointer;
 }
 
-nav i {
-    position: fixed;
+.menu:hover{
+    animation: none;
+}
+.hamburger {
+    position: absolute;
+    top: 90px;
+    left: 22px;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+  }
+    .hamburger:after, .hamburger:before {
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+    .hamburger:before {
+    top: -10px;
+  }
+    .hamburger:after {
+    bottom: -10px;
+  }
+
+ .on {
+    box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+    border-radius: 0;
+  }
+.on .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .on  .hamburger:after {
+    -webkit-transform: rotate(90deg);
+     transform: rotate(90deg);
+    bottom: 0;
+  }
+  .on .hamburger:before {
+    -webkit-transform: rotate(90deg);
+     transform: rotate(90deg);
+    top: 0;
+  }
+
+nav i {   
     font-size: 30px;
-    right: 10px;
-    top: 10px;
     color: white;
     z-index: 1;
-    cursor: pointer;
+
 }
 
 i.off {
     display: none;
 }
+
 @media (min-width:750px){
-    .fas{
-        font-size:40px;
+    .menu{
+        right: -90px;
+        top: -90px;
+        width: 180px;
+        height: 180px;
     }
-    .logo{
-        font-size:30px;
-    }
+    .hamburger {
+        top: 121px;
+        left: 45px;
+        height:3px;
+        width: 33px;
+}
 }
 
+@media (min-width:1400px){
+    .menu{
+        right: -100px;
+        top: -100px;
+        width: 200px;
+        height: 200px;
+    }
+    .hamburger {
+        top: 135px;
+        left: 50px;
+        height:4px;
+        width: 33px;
+}
+
+
+}
+    @media (min-width:1800px){
+     li a{  
+          font-size:50px;
+     }
+    }
+    
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!! FIRST VIEW SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
 .firstView{
     position: relative;
@@ -476,7 +566,7 @@ z-index: 99;
     bottom:10px;
     right:-50px;
     color:black;
-    z-index: 99999;
+    z-index: 99;
     cursor: pointer;
     transition:.2s;
     background-color: rgba(19, 245, 11, 0.6);

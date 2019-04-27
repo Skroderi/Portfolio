@@ -41,8 +41,8 @@ header{
   }
   nav ul {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 10%;
+    left: 130%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -52,16 +52,21 @@ header{
     text-align: center;
     z-index: 200;
   }
-
+.show{
+    left:50%;
+    top:50%
+}
   li a {
     margin-bottom: 0.5em;
     display: block;
-    color: #000;
+    color: rgba(25, 17, 61, 1);
+    font-weight: bolder;
     text-decoration: none;
     font-size:30px;
     padding-bottom:10px;
-    transition: .3s
+    transition: .3s 
   }
+  
   li a:hover{
       transform:scale(1.1)
   }
@@ -88,8 +93,8 @@ header{
     top: 90px;
     left: 22px;
     width: 30px;
-    height: 2px;
-    background: #000;
+    height: 3px;
+    background: rgba(25, 17, 61, 1);
     display: block;
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -102,7 +107,7 @@ header{
     display: block;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: rgba(25, 17, 61, 1);;
   }
     .hamburger:before {
     top: -10px;
@@ -130,17 +135,6 @@ header{
     top: 0;
   }
 
-nav i {   
-    font-size: 30px;
-    color: white;
-    z-index: 1;
-
-}
-
-i.off {
-    display: none;
-}
-
 @media (min-width:750px){
     .menu{
         right: -90px;
@@ -153,6 +147,10 @@ i.off {
         left: 45px;
         height:3px;
         width: 33px;
+}
+
+li a{  
+    font-size:35px;
 }
 }
 
@@ -232,7 +230,7 @@ i.off {
     left:4%;
     opacity: 0;
     animation: fadeInIntroduce 1s ease-in-out 1s forwards;
-    animation-delay: 2.6s;
+    animation-delay: 3s;
     overflow: hidden;
 
 }
@@ -244,7 +242,7 @@ i.off {
     padding-bottom:10px;
 }
 .introduce h3{
-    width:250px;
+    width:300px;
     margin-left:20px;
     float:left;
     font-family: 'Indie Flower', cursive;
@@ -255,7 +253,7 @@ i.off {
     font-size: 15px;
     padding:10px 15px;
     margin-top:60vh;
-    margin-left:10vw;
+    margin-left:7vw;
     margin-bottom:50px;
     letter-spacing: 0.1cm;
     background: none;
@@ -267,7 +265,7 @@ i.off {
     color:aquamarine;
     cursor:pointer;
     animation: shakes 4.5s linear 4s infinite, showButton .7s ease-in-out .3s forwards;
-    animation-delay: 3.2s;
+    animation-delay: 3.4s;
     transition: all 0.3s ease 0s;
     
 }
@@ -291,9 +289,7 @@ i.off {
     .hello{
         font-size: 32px;
     }
-    .introduce{
-        left:10%;
-    }
+ 
     .introduce h1{
         font-size: 55px;
     }
@@ -313,7 +309,22 @@ i.off {
     }
     .introduce h3{
         font-size: 25px;
-    }   
+    } 
+    @media (min-width:1800px){
+        .hello{
+            font-size: 45px;
+            max-width:500px;
+        }
+        .introduce h1{
+            font-size: 80px;
+        }
+        .introduce h3{
+            font-size: 35px;
+        }   
+
+        .firstView button{
+            font-size: 30px;     
+    }
 }
 
 }
@@ -480,6 +491,18 @@ z-index: 99;
     margin:50px;
 }
 }
+@media (min-width:1800px){
+.project{
+    width: 319px;
+    height: 305px;
+    max-width:400px;
+}
+.project p{
+    font-size:20px
+}
+
+}
+
 /* .project:nth-of-type(even){
     align-self: flex-end;
     margin-right:50px;
@@ -565,11 +588,11 @@ z-index: 99;
     width:40px;
     bottom:10px;
     right:-50px;
-    color:black;
+    color:white;
     z-index: 99;
     cursor: pointer;
     transition:.2s;
-    background-color: rgba(19, 245, 11, 0.6);
+    background-color: rgba(25, 17, 61, 1);
 }
 .toTop i{
     line-height: 40px;
@@ -577,8 +600,6 @@ z-index: 99;
 }
 .toTop:hover{
 transform: scale(1.2);
-background-color: rgba(19, 245, 11, 0.7);
-/* color:white; */
 }
 
 @media (min-width:750px){

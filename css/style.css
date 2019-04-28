@@ -41,6 +41,8 @@ header{
   }
   nav ul {
     position: fixed;
+    width:80%;
+    max-width:390px;
     top: 10%;
     left: 130%;
     -webkit-transform: translate(-50%, -50%);
@@ -62,11 +64,16 @@ header{
     color: rgba(25, 17, 61, 1);
     font-weight: bolder;
     text-decoration: none;
-    font-size:30px;
+    font-size:24px;
     padding-bottom:10px;
     transition: .3s 
   }
-  
+  li:last-child a{
+      background: rgba(25, 17, 61, 1);
+      color:white;
+      padding:5px 10px;
+      width:100%;
+  }
   li a:hover{
       transform:scale(1.1)
   }
@@ -175,7 +182,7 @@ li a{
           font-size:50px;
      }
     }
-    
+
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!! FIRST VIEW SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
 .firstView{
     position: relative;
@@ -297,8 +304,8 @@ li a{
         font-size: 20px;
     }
     .firstView button{
-        font-size: 20px;
-       
+        font-size: 20px;     
+}
 }
 @media (min-width:1000px){
     .introduce{
@@ -310,6 +317,7 @@ li a{
     .introduce h3{
         font-size: 25px;
     } 
+}
     @media (min-width:1800px){
         .hello{
             font-size: 45px;
@@ -327,10 +335,84 @@ li a{
     }
 }
 
+       /* !!!!!!!!!!!!!!!!!!!!!!!!!!! About Me !!!!!!!!!!!!!!!!!!!!!!!!!! */
+       .about{
+        padding-bottom:80px;
+        background-color: aliceblue;
+       }
+.about h1{
+    font-size: 42px;
+    width:70%;
+    text-align: center;
+    padding-top:50px;
+    margin-bottom:40px;
+    padding-bottom:15px;
+    margin-left: auto;
+    margin-right:auto;
+    border-bottom: 7px solid black;
+    font-weight: 900;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
 }
+       .aboutMe{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutMe img{
+        width:200px;
+        height:200px;
+        border-radius: 50%;
+        margin-bottom:50px;
+        box-shadow: 0 0 15px #3e3e3e;
+    }
+    .description p{
+    width:85%;
+    margin:0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+    }
+    @media (min-width:750px){
+        .about h1{
+            font-size:50px;
+            max-width:400px;
+            width:40%;
+        }
+        .aboutMe{
+            flex-direction: row;
+            width:80%;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .aboutMe img{
+margin:0 auto;
+        }
+    }
+
+    @media (min-width:1000px){
+        .about h1{
+            font-size:60px;
+        }
+        .aboutMe{
+            width:70%;
+       
+    }
+    }
+
+    @media (min-width:1600px){
+        .aboutMe{
+            width:55%;
+       
+    }
+    }
+
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!! PROJECTS SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
 .portfolio{
-    background:rgba(192, 192, 192, 0.76)
+    background:gainsboro;
 }
 .projects{
     display:flex;
@@ -352,6 +434,8 @@ li a{
     font-weight: 900;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
 }
 .project{
     display:flex;
@@ -518,7 +602,7 @@ z-index: 99;
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(221,82,117);
+    background-color: palevioletred;
     padding-bottom:20px;
 }
 /* .all{
@@ -540,6 +624,8 @@ z-index: 99;
     font-weight: 900;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
 }
 
 .contact h2{
@@ -623,7 +709,7 @@ transform: scale(1.2);
         }
     }
 
-
+/* first view button shaking */
     @keyframes shakes {
         0% {
             transform: translateX(0) rotateX(0deg)

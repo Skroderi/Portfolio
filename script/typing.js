@@ -1,6 +1,6 @@
-let i = -2;
+let i = -4;
 const text = "hello friend.";
-const speed = 200;
+const speed = 160;
 const spnCursor = document.querySelector('.cursor');
 window.onload = typing = () => {
     if (i < text.length) {

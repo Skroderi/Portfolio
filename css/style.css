@@ -348,7 +348,7 @@ li a{
     width:70%;
     text-align: center;
     padding-top:50px;
-    margin-bottom:40px;
+    margin-bottom:55px;
     padding-bottom:15px;
     margin-left: auto;
     margin-right:auto;
@@ -367,17 +367,17 @@ li a{
         align-items: center;
     }
     .aboutMe img{
-        width:200px;
-        height:200px;
+        width:250px;
+        height:250px;
         border-radius: 50%;
-        margin-bottom:50px;
-        box-shadow: 0 0 15px #3e3e3e;
+        box-shadow: 0 5px 15px #3e3e3e;
     }
     .description p{
     width:85%;
     margin:0 auto;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: cursive, Arial;
+    font-weight: 600;
     }
     @media (min-width:750px){
         .about h1{
@@ -415,7 +415,7 @@ margin:0 auto;
 
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!! PROJECTS SECTION !!!!!!!!!!!!!!!!!!!!!!!!!! */
 .portfolio{
-    background:gainsboro;
+    background:aliceblue;
 }
 .projects{
     display:flex;
@@ -428,7 +428,7 @@ margin:0 auto;
     font-size: 42px;
     width:60%;
     text-align: center;
-    padding-top:50px;
+    padding-top:30px;
     margin-bottom:50px;
     padding-bottom:10px;
     margin-left: auto;

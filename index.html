@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bartosz Kamiński - Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat:400,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu">
+                    <span class='hamburger'></span>
+                </div>
+                <ul id="parent-list">
+                    <li><a class="toAbout" href="#">About me</a></li>
+                    <li><a class="toPortfolio" href="#">Projects</a></li>
+                    <li><a class="toContact" href="#">Contact</a></li>
+                    <li><a href="mailto:Bakaminski@wp.pl" class="toContact">Let's work togheter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="firstView">
+            <div class="hello"><span class="text"></span><span class="cursor">|</span></div>
+            <div class="introduce">
+                <h1>My name is</h1>
+                <h1>Bartosz Kamiński</h1>
+                <h3>code is my passion</h3> <button class="firstBtn">See me works</button>
+            </div>
+        </section>
+        <section data-section="toAbout" class="about">
+            <h1>About Me</h1>
+            <div class="aboutMe">
+                <img src="img/me.jpg" alt="">
+                <div class="description">
+                    <p> I am 23 years old. I study finance and accounting in University of Gdansk and I am in fourth
+                        year. I loved coding so I
+                        would like to develop in web devepoment. Currently I'm looking for my first job or intership
+                        in 3city.</p>
+                </div>
+            </div>
+        </section>
+        <section data-section="toPortfolio" class="portfolio">
+            <h1>Projects</h1>
+            <div class="projects">
+                <div class="project">
+                    <div class="info">
+                        <h2>Weather-App</h2>
+                        <p>Application shows current and forecast(30hours) weather.
+                            App has been created in react.
+                        </p>
+                        <div class="btns">
+                            <a href="https://skroderi.github.io/Weather-App/" target="_blank"><i
+                                    class="fas fa-desktop"></i>
+                                Live</a>
+                            <a href="https://github.com/Skroderi/Weather-App" target="_blank"><i
+                                    class="fas fa-code"></i>
+                                Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="info">
+                        <h2>Typerownia24.pl</h2>
+                        <p>
+                            My webbsite created in wordpress for publishing sports analyzes.
+                        </p>
+                        <div class="btns">
+                            <a href="https://typerownia24.pl/" target="_blank"><i class="fas fa-desktop"></i> Live</a>
+                            <!-- <a href="#"><i class="fas fa-code"></i> Code</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="info">
+                        <h2>ToDoList- React</h2>
+                        <p>To create this app I used react and router.
+                        </p>
+                        <div class="btns">
+                            <a href="https://skroderi.github.io/ToDoList-React/" target="_blank"><i
+                                    class="fas fa-desktop"></i> Live</a>
+                            <a href="https://github.com/Skroderi/ToDoList-React" target="_blank"><i
+                                    class="fas fa-code"></i>
+                                Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="info">
+                        <h2>This portfolio</h2>
+                        <p>Website created to present my work. I used js, jquery and css.
+                        </p>
+                        <div class="btns">
+                            <a href="https://github.com/Skroderi/Portfolio" target="_blank"><i class="fas fa-code"></i>
+                                Code</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section data-section="toContact" class="contact">
+            <h1>Contact</h1>
+
+            <div class="presonal">
+                <h2>Bartosz Kamiński</h2>
+                <div class="item">
+                    <a href="mailto:Bakaminski@wp.pl" class="social">
+                        <img src="./img/contact1.png" alt="kontakt">
+                        <span>Bakaminski@wp.pl</span>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="social">
+                        <img src="./img/contact2.png" alt="kontakt">
+                        <span>785 930 551</span>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://github.com/Skroderi" class="social">
+                        <i class="fab fa-github lol"></i>
+                        <span>github.com/Skroderi</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <a class="toTop">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="./script/burger.js"></script>
+    <script src="./script/typing.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

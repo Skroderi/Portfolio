@@ -537,16 +537,12 @@ z-index: 99;
     background-image: url('../img/weather\ app.png');
 }
 .project:nth-of-type(2){
-    background-image: url('../img/erotic-game.png');
-}
-
-.project:nth-of-type(3){
         background-image: url('../img/typer.png');
 }
-.project:nth-of-type(4){
+.project:nth-of-type(3){
     background-image: url('../img/to\ do.png');
 }
-.project:nth-of-type(5){
+.project:nth-of-type(4){
     background-image: url('../img/portfolio2.png');
 }
 @media (min-width:750px){

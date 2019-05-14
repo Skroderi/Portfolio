@@ -1,5 +1,5 @@
 let i = -4;
-const text = "hello friend.";
+const text = "hello.";
 const speed = 160;
 const spnCursor = document.querySelector('.cursor');
 window.onload = typing = () => {

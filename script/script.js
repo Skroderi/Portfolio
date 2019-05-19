@@ -1,5 +1,44 @@
+//Hamburger
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav');
+const li = document.getElementById("parent-list")
+const ul = document.querySelector('ul')
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle('on')
+    ul.classList.toggle('show')
+})
+
+
+li.addEventListener('click', () => {
+    menu.classList.toggle('on')
+    ul.classList.toggle('show')
+})
+
+
+//typing
+let i = -4;
+const text = "{hello}.";
+const speed = 160;
+const spnCursor = document.querySelector('.cursor');
+window.onload = typing = () => {
+    if (i < text.length) {
+        document.querySelector(".text").textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+    }
+}
+
+const cursorAnimation = () => {
+    spnCursor.classList.toggle('active');
+}
+setInterval(cursorAnimation, 450);
+
+
 //effect on projects
-ScrollReveal().reveal('.project', { delay: 200 });
+ScrollReveal().reveal('.project', {
+    delay: 200
+});
 // btn in first view 
 $('.firstBtn').on('click', function () {
     $('body, html').animate({

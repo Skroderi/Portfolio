@@ -1,0 +1,128 @@
+.first-view {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/images/firstview-bgc_800x600.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  &__typing {
+    font-family: "Courier New", Courier, monospace;
+    position: absolute;
+    font-size: 1.2rem;
+    width: 80%;
+
+    max-width: 270px;
+    background-color: black;
+    margin-top: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bolder;
+    @include mq(large) {
+      font-size: 2rem;
+      max-width: 350px;
+    }
+  }
+  &__typing-text {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &__typing-cursor {
+    opacity: 0;
+    transition: 0.2s;
+    &--active {
+      opacity: 1;
+    }
+  }
+  @include mq(large) {
+    background-image: url(../assets/images/firstview-bgc_1200x900.jpg);
+  }
+  @include mq(xlarge) {
+    background-image: url(../assets/images/firstview-bgc_1920x1240.jpg);
+  }
+}
+
+.first-view__introduce {
+  font-family: "Montserrat", sans-serif;
+
+  color: khaki;
+  position: absolute;
+  width: 85%;
+  top: 33%;
+  left: 6%;
+  opacity: 0;
+  -webkit-animation: fadeInIntroduce 1s ease-in-out 1s forwards;
+  animation: fadeInIntroduce 1s ease-in-out 1s forwards;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  overflow: hidden;
+  @include mq(large) {
+    left: 10%;
+  }
+  &-header {
+    font-size: 2rem;
+    font-weight: bold;
+    @include mq(medium) {
+      font-size: 3rem;
+    }
+    @include mq(large) {
+      font-size: 3.5rem;
+    }
+    &--border {
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
+    }
+  }
+  &-header--small {
+    font-family: "Indie Flower", cursive;
+    font-size: 1.2rem;
+    width: 300px;
+    padding-top: 2px;
+    @include mq(medium) {
+      font-size: 1.6rem;
+    }
+  }
+  &-button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin-top: 60vh;
+    margin-left: 10vw;
+    margin-bottom: 50px;
+    letter-spacing: 0.1cm;
+    background: none;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid aquamarine;
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: aquamarine;
+    cursor: pointer;
+    -webkit-animation: shakes 4.5s linear 4s infinite,
+      showButton 0.7s ease-in-out 0.3s forwards;
+    animation: shakes 4.5s linear 4s infinite,
+      showButton 0.7s ease-in-out 0.3s forwards;
+    -webkit-animation-delay: 3.4s;
+    animation-delay: 3.4s;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    @include mq(medium) {
+      font-size: 1.3rem;
+      margin-left: 30vw;
+    }
+    &:hover {
+      background: aquamarine;
+      color: black;
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+      -webkit-box-shadow: 0px 15px 15px rgba(2, 199, 248, 0.986);
+      box-shadow: 0px 15px 15px rgba(2, 199, 248, 0.986);
+      margin-top: 9vh;
+    }
+  }
+}

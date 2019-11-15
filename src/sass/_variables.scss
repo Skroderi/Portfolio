@@ -1,0 +1,18 @@
+//////////// BREAKPOINTS ///////////
+
+$breakpoints: (
+  small: (
+    min-width: 500px
+  ),
+  medium: (
+    min-width: 700px
+  ),
+  large: (
+    min-width: 900px
+  ),
+  xlarge: (
+    min-width: 1100px
+  )
+);
+
+///////////////////////////////
